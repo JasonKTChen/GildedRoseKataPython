@@ -47,3 +47,9 @@ class GildedRose(object):
                 else:
                     if item.quality < 50:
                         item.quality = item.quality + 1
+    def get_items_by_name(self, name):
+        res = []
+        for item in self.items:
+            if item.name == name:
+                res.append(item)
+        return res
